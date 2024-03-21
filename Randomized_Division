@@ -1,0 +1,28 @@
+import random
+print("Hello!")
+print("1.Random")
+print("2.Manually")
+print("3.Exit")
+choice = int(input("Enter your choice:"))
+if choice ==1:
+  random_num=random.randint(0,100)
+  print("Your random number is :",random_num)
+  if(random_num==0):
+    print("Your random number is 0 \n Your Answer is : 0")
+  else :
+    try:
+      print(random_num/0)
+    except ZeroDivisionError:
+      print("You cannot divide by 0")
+elif choice==2:
+  num=int(input("Enter your number : "))
+  print("Your Entered number is :",num)
+  if(num==0):
+    print("Your Answer is : 0")
+  else :
+    try:
+      print(num/0)
+    except ZeroDivisionError:
+      print("You cannot divide by 0")
+elif choice==3:
+  print("Thank you for using this program")
